@@ -1,0 +1,32 @@
+{
+    "name": "phpway/pubsubwp",
+    "description": "Simple publish-subscribe library with ability to specify priority for subscribers",
+    "keywords": ["pubsub", "events", "publish-subscribe", "priority"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr Havlik",
+            "email": "petr.havlik@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.5",
+        "phpunit/phpunit": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PubSubWP\\": "src"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@phpcs",
+            "@phpunit"
+        ],
+        "phpcs": "php vendor/bin/phpcs",
+        "phpunit": "php vendor/bin/phpunit"
+    }
+}
