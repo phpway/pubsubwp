@@ -1,5 +1,7 @@
 # Pubsub with priority
 
+[![Build Status](https://travis-ci.org/phpway/pubsubwp.svg?branch=master)](https://travis-ci.org/phpway/pubsubwp)
+
 I hear you - why another pubsub library when there is already a plethora of them?
 I was looking for a simple PHP publish-subscribe implementation with following
 properties:
