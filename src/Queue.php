@@ -13,11 +13,11 @@ class Queue
      * @param   int         $priority   optional, callback priority in the queue
      * @return  Queue
      */
-    public function add(callable $callback, int $priority = 0)
+    public function add(callable $callback, $priority = 0)
     {
         $this->subscribers[] = [
             'callback' => $callback,
-            'priority' => $priority
+            'priority' => (int) $priority
         ];
         $this->isSorted = false;
         return $this;

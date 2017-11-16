@@ -30,7 +30,7 @@ class PubSub
      *                                  parameter
      * @param   int         $priority   optional, priority for the callback in the queue
      */
-    public function subscribe($topic, callable $callback, int $priority = 0)
+    public function subscribe($topic, callable $callback, $priority = 0)
     {
         if (!isset($this->queue[$topic])) {
             $this->queue[$topic] = new Queue;
