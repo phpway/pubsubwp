@@ -3,8 +3,8 @@ namespace PubSubWP;
 
 class Queue
 {
-    protected $subcribers = [];
-    protected $isSorted   = true;
+    protected $subscribers = [];
+    protected $isSorted    = true;
 
     /**
      * Add callback to this queue with given optional priority.
