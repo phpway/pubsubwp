@@ -17,7 +17,8 @@ class Queue
     {
         $this->subscribers[] = [
             'callback' => $callback,
-            'priority' => (int) $priority
+            'priority' => (int) $priority,
+            'addOrder' => count($this->subscribers)
         ];
         $this->isSorted = false;
         return $this;
@@ -51,9 +52,12 @@ class Queue
         usort(
             $this->subscribers,
             function ($a, $b) {
-                $rankA = $a['priority'];
-                $rankB = $b['priority'];
-                return $rankA === $rankB ? 0 : ($rankA < $rankB ? 1 : -1);
+                // sort by priority (in reverse order)
+                // if priority is same, then by addOrder to preserve the order
+                // in which the callbacks were added
+                return $a['priority'] === $b['priority']
+                    ? $a['addOrder'] - $b['addOrder']
+                    : $b['priority'] - $a['priority'];
             }
         );
         $this->isSorted = true;
