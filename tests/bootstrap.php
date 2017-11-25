@@ -1,4 +1,3 @@
-
 <?php
 // set default timezone to suppress PHP warnings
 date_default_timezone_set(@date_default_timezone_get());
