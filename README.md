@@ -46,7 +46,7 @@ $initialEventData = ['tape' => ''];
 $event = $pubsub->publish('topic.foo', $initialEventData);
 ```
 
-Event's initial data can be specified in second optional parameter. Each subscribed
+Event's initial data can be specified in the second optional parameter. Each subscribed
 callback will receive this event object in the (only) parameter.
 
 ```php

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Knls coding standard">
-    <description>Pubsub library coding standard</description>
+<ruleset name="PubSubWP coding standard">
+    <description>PubSubWP library coding standard</description>
 
     <!-- display progress -->
     <arg value="p"/>
